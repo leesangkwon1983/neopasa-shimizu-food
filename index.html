@@ -73,13 +73,13 @@ one('data-t','type');one('data-s','sort');
 document.querySelectorAll('[data-f]').forEach(c=>c.onclick=()=>{st[c.dataset.f]=!st[c.dataset.f];c.classList.toggle('on');draw()});
 const won=y=>'약 '+(Math.round(y*8.5/100)*100).toLocaleString()+'원';
 const score=s=>s.kids*3+(s.cat==='간식'?-4:0)+s.tabelog;
-function card(s){const menu=s.menu.map(([n,j,y])=>`<div class="mi2"><div><div class="n" style="font-weight:600">${n}</div><div class="j">${j}</div></div><div class="p">${y?y.toLocaleString()+'엔<span class="w">'+won(y)+'</span>':'<span class="na" style="font-size:12.5px;font-weight:500">가격 미공개</span>'}</div></div>`).join('');
+function card(s){const menu=s.menu.map(([n,j,y,src])=>`<div class="mi2"><div><div class="n" style="font-weight:600">${n}</div><div class="j">${j}${src?' · 가격: '+src:''}</div></div><div class="p">${y?y.toLocaleString()+'엔<span class="w">'+won(y)+'</span>':'<span class="na" style="font-size:12.5px;font-weight:500">가격 미공개</span>'}</div></div>`).join('');
 return `<div class="card" id="c${s.id}"><div class="top" onclick="this.parentNode.classList.toggle('open')"><img class="thumb" loading="lazy" src="img/${s.img}" alt="">
 <div class="t"><span class="cat" style="--c:${COL[s.cat]}">${s.cat}</span><h2>${s.ko} <span class="jp">(${s.jp})</span></h2>
 <div class="meta">${s.type} · ${s.hours}</div><div class="meta">가격대 ${s.range}</div>
 <div class="badges">${s.kids?'<span class="b kid">👶 아이 추천</span>':''}${s.tabelog?`<span class="b">타베로그 ${s.tabelog.toFixed(2)}</span>`:''}</div></div></div>
-<div class="d"><table><tr><td>영업시간</td><td>${s.hours}</td></tr><tr><td>가격대</td><td>${s.range} (공식)</td></tr><tr><td>평점</td><td>구글 ${s.google||'-'}<br>타베로그 ${s.tabelog?s.tabelog.toFixed(2):'-'}</td></tr><tr><td>전화</td><td>${s.tel}</td></tr></table>
-${s.note?`<div class="warn">⚠️ ${s.note}</div>`:''}<h3>대표 메뉴</h3>${menu}
+<div class="d"><table><tr><td>영업시간</td><td>${s.hours}</td></tr><tr><td>가격대</td><td>${s.range} (공식)</td></tr><tr><td>평점</td><td>구글 ${s.google}<br>타베로그 ${s.tabelog?s.tabelog.toFixed(2):'점수 없음'}<br>야후 지도 ${s.yahoo}</td></tr>${s.pay?`<tr><td>결제</td><td>${s.pay}</td></tr>`:''}${s.wait?`<tr><td>대기·혼잡</td><td>${s.wait}</td></tr>`:''}<tr><td>전화</td><td>${s.tel}</td></tr></table>
+${s.note?`<div class="warn">⚠️ ${s.note}</div>`:''}<h3>대표 메뉴</h3>${menu}${s.good||s.bad?`<h3>후기 요약</h3><div style="font-size:14px;line-height:1.6">${s.good?`<div style="color:#067647">👍 ${s.good}</div>`:''}${s.bad?`<div style="color:#b42318">👎 ${s.bad}</div>`:''}</div>`:''}
 <div class="links"><a href="${s.gmap}" target="_blank" rel="noopener">구글 지도</a><a class="l2" href="https://sapa.c-nexco.co.jp/sapa/shop?sapainfoid=189" target="_blank" rel="noopener">NEXCO 공식</a></div></div></div>`}
 function draw(){let L=S.filter(s=>(!st.type||s.cat===st.type)&&(!st.kid||s.kids));
 L.sort(st.sort==='rec'?(a,b)=>score(b)-score(a):(a,b)=>b.tabelog-a.tabelog);
