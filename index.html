@@ -1,0 +1,88 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NEOPASA 시미즈 식당 안내</title><meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--bg:#f5f5f3;--card:#fff;--ink:#1d1d1f;--sub:#6e6e73;--acc:#c2410c;--kid:#15803d;--line:#e5e5e2;--soft:#f2f2ef}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:-.01em;padding-bottom:env(safe-area-inset-bottom)}
+header{padding:28px 20px 12px;max-width:640px;margin:0 auto}h1{font-size:24px;font-weight:700;margin:0 0 8px;letter-spacing:-.02em}header p{margin:0 0 4px;color:var(--sub);font-size:14px}
+.sum{display:inline-block;font-size:13px;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin-bottom:10px}
+.tips{max-width:600px;margin:8px 16px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:14px}
+@media(min-width:640px){.tips{margin:8px auto 16px}}
+.tips h2{font-size:15px;margin:0 0 8px;font-weight:700}.tips ul{margin:0;padding-left:18px}.tips li{margin:6px 0;color:#333}.tips li b{color:var(--ink)}
+.bar{position:sticky;top:0;z-index:5;background:rgba(245,245,243,.88);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);padding:10px 16px;border-bottom:1px solid var(--line)}
+.row{display:flex;gap:8px;overflow-x:auto;padding:3px 0;scrollbar-width:none;max-width:640px;margin:0 auto}.row::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;font-size:13.5px;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+select{font-size:14px;padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);-webkit-appearance:none;appearance:none}
+.count{font-size:13px;color:var(--sub);padding:14px 20px 4px;max-width:640px;margin:0 auto}
+.list{padding:8px 16px 40px;display:grid;gap:12px;max-width:640px;margin:0 auto}
+.card{background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.top{display:flex;gap:14px;padding:14px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.thumb{width:88px;height:88px;flex:none;border-radius:12px;object-fit:cover;background:var(--soft)}
+.t{min-width:0}.t h2{font-size:16px;font-weight:700;margin:0 0 4px;line-height:1.35}.t .jp{display:block;font-size:12px;color:var(--sub);font-weight:400;margin-top:1px}
+.meta{font-size:13px;color:var(--sub);margin:2px 0}
+.badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.b{font-size:11.5px;padding:3px 8px;border-radius:999px;background:var(--soft);color:#555}.b.kid{background:#ecf7ef;color:var(--kid);font-weight:600}.b.g{background:#eef2fb;color:#2f4f9a;font-weight:600}
+.d{display:none;border-top:1px solid var(--line);padding:16px}.card.open .d{display:block}
+.gal{display:flex;gap:8px;overflow-x:auto;margin-bottom:12px;scrollbar-width:none}.gal img{height:150px;border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:14px}td{padding:8px 4px;border-bottom:1px solid var(--soft);vertical-align:top}td:first-child{color:var(--sub);width:84px;white-space:nowrap}
+.menu{display:grid;gap:10px;margin:10px 0}.mi{display:flex;gap:12px;align-items:center}
+.mi img,.mi .ph{width:64px;height:64px;border-radius:12px;object-fit:cover;flex:none;background:var(--soft)}
+.mi .ph{display:flex;align-items:center;justify-content:center;font-size:10.5px;color:#999;text-align:center}
+.mi .n{font-size:14px;font-weight:600}.mi .p{font-size:13.5px;color:var(--acc);font-weight:600}.mi .s{font-size:11px;color:#999}
+h3{font-size:14px;font-weight:700;margin:18px 0 8px}.rv{font-size:14px;line-height:1.6;background:var(--soft);border-radius:12px;padding:10px 12px}.rv .good{color:var(--kid)}.rv .bad{color:#b42318}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.links a{flex:1;min-width:110px;text-align:center;padding:11px;border-radius:12px;background:var(--ink);color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+.links a.l2{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.na{color:#a16207}
+footer{font-size:12px;color:var(--sub);padding:0 20px 48px;line-height:1.7;max-width:640px;margin:0 auto}
+
+header{position:relative;max-width:none;margin:0;padding:44px 22px 26px;color:#fff;background:linear-gradient(160deg,rgba(28,25,23,.25),rgba(28,25,23,.78)),url(img/SapaShop_32842_L.jpg) center/cover;border-radius:0 0 28px 28px}
+header h1{font-size:27px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.3)}header p{color:rgba(255,255,255,.88)}header .na{color:#fde68a}
+.sum{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.tips{box-shadow:0 6px 24px rgba(0,0,0,.06);border:none;margin-top:-6px;position:relative}
+.tips h2::before{content:"💡 "}
+.card{border:none;box-shadow:0 2px 10px rgba(0,0,0,.05),0 8px 28px rgba(0,0,0,.05);border-radius:22px}
+.top{display:block;padding:0}.thumb{width:100%;height:190px;border-radius:0;display:block}
+.t{padding:14px 16px 16px}.t h2{font-size:18px}
+.cat{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;margin-bottom:6px;color:var(--c);background:color-mix(in srgb,var(--c) 12%,#fff)}
+.chip{box-shadow:0 1px 2px rgba(0,0,0,.04);font-weight:500;transition:all .15s}.chip.on{box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.chip[data-t]{--c:#1d1d1f}.chip[data-t].on{background:var(--c);border-color:var(--c)}
+.lab{flex:none;align-self:center;font-size:12px;font-weight:700;color:var(--sub);width:30px}
+
+.seg{flex:none;display:inline-flex;background:#e8e8e5;border-radius:999px;padding:3px}.seg span{white-space:nowrap;padding:5px 11px;border-radius:999px;font-size:13px;color:var(--sub);cursor:pointer;font-weight:600;transition:all .15s}.seg span.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15)}.sep{flex:none;width:1px;height:20px;background:var(--line);align-self:center}
+@media(max-width:420px){.seg span{padding:5px 8px;font-size:12.5px}}
+header{text-align:center}header h1{font-size:clamp(25px,7.4vw,32px);word-break:keep-all}@media(min-width:640px){header h1{font-size:38px}}
+</style><style>.mi2{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--soft)}.mi2 .j{font-size:11.5px;color:#999}.mi2 .p{text-align:right;white-space:nowrap;color:var(--acc);font-weight:700;font-size:14px}.mi2 .w{display:block;font-size:12px;color:var(--sub);font-weight:400}.warn{font-size:13px;color:#a16207;margin-top:6px}</style></head><body>
+<header><h1>NEOPASA 시미즈 식당 안내</h1>
+<div class="sum">11/10(화) 점심</div>
+<p>100엔 ≈ 850원 (10/16 기준)</p></header>
+<div class="bar">
+<div class="row"><span class="lab">종류</span><span id="types" class="seg"></span></div>
+<div class="row"><span class="lab">정렬</span><span class="seg"><span class="on" data-s="rec">추천순</span><span data-s="rate">평점순</span></span><span class="sep"></span><span class="seg"><span data-f="kid">아이 추천</span><span data-f="group">8명 자리</span></span></div></div>
+<div class="count" id="count"></div><div class="list" id="list"></div>
+<footer>상행(도쿄 방면) 푸드코트 기준이에요. 출처: NEXCO 중일본 공식 NEOPASA 시미즈 상행 매장 정보(2026-10-16 확인), 평점: 타베로그. 사진: NEXCO 중일본 공식(스타동은 체인 공식). 가격은 세금 포함이며 바뀔 수 있어요. 일곱 곳 모두 푸드코트 공용 좌석을 같이 써요.</footer>
+<script src="data.js"></script>
+<script>
+const S=window.SHOPS,$=s=>document.querySelector(s);let st={type:'',kid:false,group:false,sort:'rec'};
+const COL={'덮밥·정식':'#c2410c','면':'#b45309','양식':'#1d4ed8','간식':'#7c3aed'};
+const types=Object.keys(COL).filter(t=>S.some(s=>s.cat===t));
+$('#types').innerHTML='<span class="on" data-t="">전체</span>'+types.map(t=>`<span data-t="${t}">${t}(${S.filter(s=>s.cat===t).length})</span>`).join('');
+const one=(a,k,f)=>document.querySelectorAll(`[${a}]`).forEach(c=>c.onclick=()=>{st[k]=c.getAttribute(a);document.querySelectorAll(`[${a}]`).forEach(x=>x.classList.toggle('on',x===c));draw()});
+one('data-t','type');one('data-s','sort');
+document.querySelectorAll('[data-f]').forEach(c=>c.onclick=()=>{st[c.dataset.f]=!st[c.dataset.f];c.classList.toggle('on');draw()});
+const won=y=>'약 '+(Math.round(y*8.5/100)*100).toLocaleString()+'원';
+const score=s=>s.kids*3+(s.cat==='간식'?-4:0)+s.tabelog;
+function card(s){const menu=s.menu.map(([n,j,y])=>`<div class="mi2"><div><div class="n" style="font-weight:600">${n}</div><div class="j">${j}</div></div><div class="p">${y?y.toLocaleString()+'엔<span class="w">'+won(y)+'</span>':'<span class="na" style="font-size:12.5px;font-weight:500">가격 미공개</span>'}</div></div>`).join('');
+return `<div class="card" id="c${s.id}"><div class="top" onclick="this.parentNode.classList.toggle('open')"><img class="thumb" loading="lazy" src="img/${s.img}" alt="">
+<div class="t"><span class="cat" style="--c:${COL[s.cat]}">${s.cat}</span><h2>${s.ko} <span class="jp">(${s.jp})</span></h2>
+<div class="meta">${s.type} · ${s.hours}</div><div class="meta">가격대 ${s.range}</div>
+<div class="badges">${s.kids?'<span class="b kid">👶 아이 추천</span>':''}<span class="b g">8명 자리 · 푸드코트 공용석</span>${s.tabelog?`<span class="b">타베로그 ${s.tabelog.toFixed(2)}</span>`:''}</div></div></div>
+<div class="d"><table><tr><td>영업시간</td><td>${s.hours}</td></tr><tr><td>가격대</td><td>${s.range} (공식)</td></tr><tr><td>좌석</td><td>푸드코트 공용 좌석 · 좌석 수 <span class="na">확인 필요</span></td></tr><tr><td>평점</td><td>타베로그 ${s.tabelog?s.tabelog.toFixed(2):'<span class="na">확인 필요</span>'}</td></tr><tr><td>전화</td><td>${s.tel}</td></tr></table>
+${s.note?`<div class="warn">⚠️ ${s.note}</div>`:''}<h3>대표 메뉴</h3>${menu}
+<div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Shimizu+Parking+Area+(up)" target="_blank" rel="noopener">구글 지도</a><a class="l2" href="https://sapa.c-nexco.co.jp/sapa/shop?sapainfoid=189" target="_blank" rel="noopener">NEXCO 공식</a></div></div></div>`}
+function draw(){let L=S.filter(s=>(!st.type||s.cat===st.type)&&(!st.kid||s.kids));
+L.sort(st.sort==='rec'?(a,b)=>score(b)-score(a):(a,b)=>b.tabelog-a.tabelog);
+$('#count').textContent=`${L.length}곳 · 카드를 누르면 자세히 펼쳐져요`;$('#list').innerHTML=L.map(card).join('')}
+draw();
+</script></body></html>
