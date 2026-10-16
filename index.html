@@ -61,7 +61,7 @@ header{text-align:center}header h1{font-size:clamp(25px,7.4vw,32px);word-break:k
 <div class="row"><span class="lab">종류</span><span id="types" class="seg"></span></div>
 <div class="row"><span class="lab">정렬</span><span class="seg"><span class="on" data-s="rec">추천순</span><span data-s="rate">평점순</span></span><span class="sep"></span><span class="seg"><span data-f="kid">아이 추천</span></span></div></div>
 <div class="count" id="count"></div><div class="list" id="list"></div>
-<footer>상행(도쿄 방면) 푸드코트 기준이에요. 출처: NEXCO 중일본 공식 NEOPASA 시미즈 상행 매장 정보(2026-10-16 확인), 평점: 타베로그. 사진: NEXCO 중일본 공식(스타동은 체인 공식). 가격은 세금 포함이며 바뀔 수 있어요.</footer>
+<footer>상행(도쿄 방면) 푸드코트 기준이에요. 출처: NEXCO 중일본 공식 NEOPASA 시미즈 상행 매장 정보(2026-10-16 확인), 평점: 구글 지도(각 가게 페이지, 10/16)·타베로그. 사진: NEXCO 중일본 공식(스타동은 체인 공식). 가격은 세금 포함이며 바뀔 수 있어요.</footer>
 <script src="data.js"></script>
 <script>
 const S=window.SHOPS,$=s=>document.querySelector(s);let st={type:'',kid:false,sort:'rec'};
@@ -78,9 +78,9 @@ return `<div class="card" id="c${s.id}"><div class="top" onclick="this.parentNod
 <div class="t"><span class="cat" style="--c:${COL[s.cat]}">${s.cat}</span><h2>${s.ko} <span class="jp">(${s.jp})</span></h2>
 <div class="meta">${s.type} · ${s.hours}</div><div class="meta">가격대 ${s.range}</div>
 <div class="badges">${s.kids?'<span class="b kid">👶 아이 추천</span>':''}${s.tabelog?`<span class="b">타베로그 ${s.tabelog.toFixed(2)}</span>`:''}</div></div></div>
-<div class="d"><table><tr><td>영업시간</td><td>${s.hours}</td></tr><tr><td>가격대</td><td>${s.range} (공식)</td></tr><tr><td>평점</td><td>타베로그 ${s.tabelog?s.tabelog.toFixed(2):'<span class="na">확인 필요</span>'}</td></tr><tr><td>전화</td><td>${s.tel}</td></tr></table>
+<div class="d"><table><tr><td>영업시간</td><td>${s.hours}</td></tr><tr><td>가격대</td><td>${s.range} (공식)</td></tr><tr><td>평점</td><td>구글 ${s.google||'-'}<br>타베로그 ${s.tabelog?s.tabelog.toFixed(2):'-'}</td></tr><tr><td>전화</td><td>${s.tel}</td></tr></table>
 ${s.note?`<div class="warn">⚠️ ${s.note}</div>`:''}<h3>대표 메뉴</h3>${menu}
-<div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Shimizu+Parking+Area+(up)" target="_blank" rel="noopener">구글 지도</a><a class="l2" href="https://sapa.c-nexco.co.jp/sapa/shop?sapainfoid=189" target="_blank" rel="noopener">NEXCO 공식</a></div></div></div>`}
+<div class="links"><a href="${s.gmap}" target="_blank" rel="noopener">구글 지도</a><a class="l2" href="https://sapa.c-nexco.co.jp/sapa/shop?sapainfoid=189" target="_blank" rel="noopener">NEXCO 공식</a></div></div></div>`}
 function draw(){let L=S.filter(s=>(!st.type||s.cat===st.type)&&(!st.kid||s.kids));
 L.sort(st.sort==='rec'?(a,b)=>score(b)-score(a):(a,b)=>b.tabelog-a.tabelog);
 $('#count').textContent=`${L.length}곳 · 카드를 누르면 자세히 펼쳐져요`;$('#list').innerHTML=L.map(card).join('')}
